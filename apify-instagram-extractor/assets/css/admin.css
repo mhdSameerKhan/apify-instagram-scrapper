@@ -1,0 +1,751 @@
+/**
+ * Apify Instagram Extractor - Admin Responsive Styles
+ */
+
+:root {
+    --apify-insta-grad: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    --apify-primary: #dc2743;
+    --apify-primary-hover: #bc1888;
+    --apify-bg-card: #ffffff;
+    --apify-border: #e2e8f0;
+    --apify-text: #1e293b;
+    --apify-text-muted: #64748b;
+    --apify-radius: 12px;
+}
+
+.apify-insta-admin-wrap {
+    margin: 20px 20px 20px 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    box-sizing: border-box;
+}
+
+.apify-insta-admin-wrap * {
+    box-sizing: border-box;
+}
+
+/* Header */
+.apify-insta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 22px 28px;
+    border-radius: var(--apify-radius);
+    border: 1px solid var(--apify-border);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+    margin-bottom: 22px;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.apify-insta-header-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.apify-insta-logo-badge {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: var(--apify-insta-grad);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 16px rgba(220, 39, 67, 0.3);
+    flex-shrink: 0;
+}
+
+.apify-insta-header h1 {
+    font-size: 21px;
+    font-weight: 700;
+    margin: 0 0 3px 0;
+    color: var(--apify-text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.apify-badge-ver {
+    font-size: 11px;
+    font-weight: 600;
+    background: #f1f5f9;
+    color: #475569;
+    padding: 2px 8px;
+    border-radius: 20px;
+}
+
+.apify-subtitle {
+    margin: 0;
+    color: var(--apify-text-muted);
+    font-size: 13px;
+}
+
+.apify-header-quick-stats {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.apify-stat-pill {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.apify-pill-label { color: var(--apify-text-muted); }
+.apify-pill-val { font-weight: 700; color: var(--apify-text); }
+
+/* Tab Navigation */
+.apify-tab-nav {
+    border-bottom: 2px solid #e2e8f0;
+    margin-bottom: 22px;
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0;
+}
+
+.apify-tab-nav::-webkit-scrollbar {
+    height: 4px;
+}
+
+.apify-tab-nav::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+.apify-tab-nav .nav-tab {
+    border: none;
+    background: transparent;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 16px;
+    color: var(--apify-text-muted);
+    border-radius: 8px 8px 0 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.apify-tab-nav .nav-tab:hover {
+    color: var(--apify-primary);
+    background: #f8fafc;
+}
+
+.apify-tab-nav .nav-tab-active {
+    color: var(--apify-primary);
+    border-bottom: 3px solid var(--apify-primary);
+    background: #ffffff;
+}
+
+.apify-tab-counter {
+    background: #fee2e2;
+    color: #ef4444;
+    font-size: 11px;
+    padding: 1px 7px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+/* Cards & Layout */
+.apify-card {
+    background: #ffffff;
+    border: 1px solid var(--apify-border);
+    border-radius: var(--apify-radius);
+    padding: 24px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+    margin-bottom: 22px;
+}
+
+.apify-card-header {
+    margin-bottom: 18px;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 14px;
+}
+
+.apify-card-header h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 6px 0;
+    color: var(--apify-text);
+}
+
+.apify-card-header p {
+    margin: 0;
+    color: var(--apify-text-muted);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.apify-grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+/* Responsive Grid */
+@media (max-width: 960px) {
+    .apify-grid-2col {
+        grid-template-columns: 1fr;
+    }
+    .apify-insta-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .apify-insta-admin-wrap {
+        margin-right: 12px;
+    }
+    .apify-card {
+        padding: 18px;
+    }
+    .flex-between {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .flex-between .button {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
+/* Tokens List */
+.apify-tokens-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.apify-empty-state {
+    text-align: center;
+    padding: 36px 20px;
+    background: #f8fafc;
+    border: 2px dashed #cbd5e1;
+    border-radius: 12px;
+    color: #64748b;
+}
+
+.apify-empty-state .dashicons {
+    font-size: 38px;
+    width: 38px;
+    height: 38px;
+    color: #94a3b8;
+    margin-bottom: 10px;
+}
+
+.apify-empty-state-actionable {
+    background: #ffffff;
+    border: 2px dashed #f43f5e;
+    border-radius: 16px;
+    padding: 36px 24px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(220, 39, 67, 0.04);
+}
+
+.apify-empty-icon-wrap {
+    width: 64px;
+    height: 64px;
+    background: #fff1f2;
+    color: #e11d48;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+}
+
+.apify-empty-icon-wrap .dashicons {
+    font-size: 32px;
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    color: #e11d48;
+}
+
+.apify-empty-state-actionable h3 {
+    margin: 0 0 8px;
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--apify-text);
+}
+
+.apify-empty-state-actionable p {
+    margin: 0 auto 20px;
+    color: var(--apify-text-muted);
+    font-size: 13.5px;
+    max-width: 520px;
+    line-height: 1.5;
+}
+
+.apify-quick-add-box {
+    max-width: 560px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.apify-quick-input-wrap {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.apify-quick-input-wrap input[type="text"] {
+    flex: 1;
+    min-width: 240px;
+    padding: 10px 14px !important;
+    font-size: 14px !important;
+    border: 2px solid #e2e8f0 !important;
+    border-radius: 8px !important;
+    transition: border-color 0.2s;
+}
+
+.apify-quick-input-wrap input[type="text"]:focus {
+    border-color: #dc2743 !important;
+    box-shadow: 0 0 0 2px rgba(220, 39, 67, 0.15) !important;
+    outline: none !important;
+}
+
+.apify-quick-input-wrap .button {
+    padding: 10px 20px !important;
+    height: auto !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    border-radius: 8px !important;
+    background: var(--apify-primary) !important;
+    border-color: var(--apify-primary) !important;
+}
+
+.apify-quick-input-wrap .button:hover {
+    background: var(--apify-primary-hover) !important;
+    border-color: var(--apify-primary-hover) !important;
+}
+
+@media (max-width: 600px) {
+    .apify-quick-input-wrap {
+        flex-direction: column;
+    }
+    .apify-quick-input-wrap input[type="text"],
+    .apify-quick-input-wrap .button {
+        width: 100% !important;
+        justify-content: center;
+    }
+}
+
+.apify-token-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 18px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.apify-token-card:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.apify-token-paused {
+    opacity: 0.7;
+    background: #f8fafc;
+}
+
+.apify-token-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 14px;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.apify-token-info {
+    flex: 1;
+    min-width: 220px;
+}
+
+.apify-token-title {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 6px 0;
+    color: var(--apify-text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.apify-account-badge {
+    font-size: 11px;
+    font-weight: 600;
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+.apify-token-key-display {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.apify-token-key-display code {
+    background: #f1f5f9;
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    color: #475569;
+    word-break: break-all;
+}
+
+.apify-btn-reveal-token {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #64748b;
+    padding: 2px;
+}
+
+.apify-status-badge {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 10px;
+    border-radius: 14px;
+}
+
+.status-active { background: #dcfce7; color: #166534; }
+.status-paused { background: #f1f5f9; color: #64748b; }
+
+/* Usage Meter */
+.apify-usage-meter-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 14px;
+    margin-bottom: 14px;
+}
+
+.apify-usage-label-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.apify-usage-percent { font-weight: 700; }
+.meter-green { color: #16a34a; }
+.meter-orange { color: #d97706; }
+.meter-red { color: #dc2626; }
+
+.apify-progress-track {
+    height: 10px;
+    background: #e2e8f0;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.apify-progress-fill {
+    height: 100%;
+    transition: width 0.4s ease;
+    border-radius: 6px;
+}
+
+.apify-progress-fill.meter-green { background: #22c55e; }
+.apify-progress-fill.meter-orange { background: #f59e0b; }
+.apify-progress-fill.meter-red { background: #ef4444; }
+
+.apify-usage-footer {
+    margin-top: 8px;
+    color: var(--apify-text-muted);
+    font-size: 12px;
+}
+
+.apify-token-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.apify-token-actions .button {
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+@media (max-width: 500px) {
+    .apify-token-actions .button {
+        flex: 1 1 45%;
+        justify-content: center;
+    }
+}
+
+/* Strategy Radios */
+.apify-radio-card-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.apify-radio-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.apify-radio-card.selected,
+.apify-radio-card:hover {
+    border-color: #dc2743;
+    background: #fff5f6;
+}
+
+.apify-radio-card input { margin-top: 4px; flex-shrink: 0; }
+
+.apify-radio-card-body strong {
+    display: block;
+    font-size: 14px;
+    color: var(--apify-text);
+    margin-bottom: 4px;
+}
+
+.apify-radio-card-body p {
+    margin: 0;
+    font-size: 12px;
+    color: var(--apify-text-muted);
+    line-height: 1.4;
+}
+
+.apify-info-box {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 10px;
+    padding: 16px;
+    color: #166534;
+    font-size: 13px;
+}
+
+.apify-info-box h4 {
+    margin: 0 0 6px 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #15803d;
+}
+
+.apify-info-box p { margin: 0; line-height: 1.5; }
+
+/* Modal Responsive */
+.apify-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+    padding: 16px;
+}
+
+.apify-modal-content {
+    background: #ffffff;
+    width: 480px;
+    max-width: 95vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    animation: apify-modal-in 0.2s ease-out;
+}
+
+@keyframes apify-modal-in {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.apify-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 22px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.apify-modal-header h3 { margin: 0; font-size: 17px; font-weight: 700; }
+.apify-modal-close { background: none; border: none; font-size: 24px; cursor: pointer; color: #94a3b8; }
+.apify-modal-body { padding: 22px; }
+.apify-form-group { margin-bottom: 16px; }
+.apify-form-group label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 13px; }
+.apify-form-group input { width: 100% !important; }
+
+.apify-modal-footer {
+    padding: 16px 22px;
+    background: #f8fafc;
+    border-top: 1px solid #f1f5f9;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* Cache Status Box */
+.apify-cache-status-box {
+    text-align: center;
+    padding: 24px 16px;
+    background: #f8fafc;
+    border-radius: 12px;
+}
+
+.apify-stat-big { margin-bottom: 16px; }
+.apify-stat-number { display: block; font-size: 42px; font-weight: 800; color: #dc2743; }
+.apify-stat-label { font-size: 14px; color: var(--apify-text-muted); }
+
+/* Table Wrapper for Responsive Scrolling */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.apify-badge-success { background: #dcfce7; color: #15803d; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 700; }
+.apify-badge-error { background: #fee2e2; color: #b91c1c; padding: 2px 8px; border-radius: 12px; font-size: 11px; font-weight: 700; }
+
+.apify-code-box {
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 16px;
+    border-radius: 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    max-height: 480px;
+    overflow-y: auto;
+    overflow-x: auto;
+    font-family: Consolas, Monaco, "Courier New", monospace;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.apify-toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #0f172a;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+    font-size: 13px;
+    z-index: 100001;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    animation: apify-toast-in 0.3s ease-out;
+}
+
+@keyframes apify-toast-in {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   Mobile & Responsive Admin Adjustments
+   ========================================================================== */
+@media (max-width: 782px) {
+    .apify-insta-admin-wrap {
+        margin: 10px 10px 20px 0;
+    }
+
+    .apify-insta-header {
+        padding: 16px;
+    }
+
+    .apify-insta-header h1 {
+        font-size: 18px;
+    }
+
+    .apify-card {
+        padding: 16px;
+    }
+
+    /* Stack WordPress form tables cleanly */
+    .apify-card .form-table,
+    .apify-card .form-table tbody,
+    .apify-card .form-table tr,
+    .apify-card .form-table th,
+    .apify-card .form-table td {
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .apify-card .form-table th {
+        padding: 12px 0 4px 0 !important;
+        font-weight: 700 !important;
+        color: var(--apify-text);
+    }
+
+    .apify-card .form-table td {
+        padding: 0 0 14px 0 !important;
+    }
+
+    .apify-card .form-table td input[type="text"],
+    .apify-card .form-table td input[type="number"],
+    .apify-card .form-table td select {
+        width: 100% !important;
+        max-width: 100% !important;
+        font-size: 15px !important;
+        padding: 8px 10px !important;
+    }
+
+    .apify-header-quick-stats {
+        width: 100%;
+    }
+
+    .apify-stat-pill {
+        flex: 1 1 auto;
+        justify-content: center;
+    }
+}
+
